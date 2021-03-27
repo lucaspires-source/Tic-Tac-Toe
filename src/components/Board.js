@@ -1,18 +1,19 @@
 import React from 'react'
 import Square from './Square';
 const style ={
-    background:'lightblue',
-    border: '2px solid darkblue',
-    fontSize: '30px',
-    fontWeight:'800',
-    cursor:'pointer',
-    outline: 'none'
+    border: '4px solid darkblue',
+    borderRadius:'10px',
+    width:'250px',
+    height:'250px',
+    margin:'0 auto',
+    display:'grid',
+    gridTemplate:'repeat(3, 1fr) / repeat(3, 1fr)'
 }
 
 
 const Board = ({squares, onClick}) => {
     return (
-        <div>
+        <div style={style}>
             <Square value="1" onClick={() => onClick("Teste")}/>
             <Square value="2" onClick={() => onClick("Teste")}/>
             <Square value="3" onClick={() => onClick("Teste")}/>
