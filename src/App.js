@@ -2,14 +2,10 @@ import React from 'react'
 import './App.css';
 import Game from './components/Game';
 const App = () => {
-  const style={
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'center'
-  }
+
   
   return (
-    <div style={style}>
+    <div className="App">
       <Game/>
     </div>
   )
