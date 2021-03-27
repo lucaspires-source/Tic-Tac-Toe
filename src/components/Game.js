@@ -1,10 +1,23 @@
 import React from 'react'
+import Board from './Board'
+
 
 const Game = () => {
+    const handleClick = () =>{
+        console.log("teste")
+    }
+
+    const jumpTo = () =>{
+        
+    }
+
+    const renderMoves = () =>{
+        
+    }
     return (
-        <div>
-            Game
-        </div>
+        <>
+            <Board onClick={handleClick}/>
+        </>
     )
 }
 
