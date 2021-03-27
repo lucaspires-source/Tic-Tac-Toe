@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Square from './Square';
 const style ={
     border: '4px solid darkblue',
@@ -14,15 +14,10 @@ const style ={
 const Board = ({squares, onClick}) => {
     return (
         <div style={style}>
-            <Square value="1" onClick={() => onClick("Teste")}/>
-            <Square value="2" onClick={() => onClick("Teste")}/>
-            <Square value="3" onClick={() => onClick("Teste")}/>
-            <Square value="4" onClick={() => onClick("Teste")}/>
-            <Square value="5" onClick={() => onClick("Teste")}/>
-            <Square value="6" onClick={() => onClick("Teste")}/>
-            <Square value="7" onClick={() => onClick("Teste")}/>
-            <Square value="8" onClick={() => onClick("Teste")}/>
-            <Square value="9" onClick={() => onClick("Teste")}/>
+
+            {squares.map((square, i) => {
+                return <Square key={i} value={square} onClick={() => onClick(i)}/>
+            })}
         </div>
     )
 }
